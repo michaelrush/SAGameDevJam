@@ -25,6 +25,7 @@ namespace Classic
         public Wave(int waveNumber)
         {
             complete = false;
+            // find a way to clone this to prevent butchering the list
             timeline = timelines[waveNumber];
             timeline.spawns.Sort((s1, s2) => s1.spawnTime.CompareTo(s2.spawnTime));
             killCount = timeline.spawns.Count;

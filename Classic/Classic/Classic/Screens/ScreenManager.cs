@@ -87,6 +87,13 @@ namespace Classic
             activeScreen.Show();
         }
 
+        public void transitionAndLoad(GameScreen fromScreen, ActionScreen toScreen)
+        {
+            fromScreen.Hide();
+            activeScreen = toScreen;
+            toScreen.RequestLoadLevel();
+        }
+
         public override void Update(GameTime gameTime)
         {
             handleInput();

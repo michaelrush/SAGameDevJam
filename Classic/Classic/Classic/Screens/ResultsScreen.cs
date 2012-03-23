@@ -30,11 +30,6 @@ namespace Classic
             base.Update(gameTime);
             oldKeyboardState = keyboardState;
             keyboardState = Keyboard.GetState();
-
-            if (keyboardState.IsKeyDown(Keys.Enter))
-            {
-                screenManager.transitionScreens(this, screenManager.startScreen);
-            }
         }
 
         /// <summary>
@@ -80,8 +75,8 @@ namespace Classic
             spriteBatch.DrawString(spriteFont, "Time: " + time, new Vector2(251, 300), Color.Black, 0, Vector2.Zero, .7f, SpriteEffects.None, 0);
             spriteBatch.DrawString(spriteFont, "Time: " + time, new Vector2(250, 300), Color.White, 0, Vector2.Zero, .7f, SpriteEffects.None, 0);
 
-            spriteBatch.DrawString(spriteFont, "Press Enter to Replay", new Vector2(251, 420), Color.Black, 0, Vector2.Zero, .5f, SpriteEffects.None, 0);
-            spriteBatch.DrawString(spriteFont, "Press Enter to Replay", new Vector2(251, 420), Color.White, 0, Vector2.Zero, .5f, SpriteEffects.None, 0);
+            spriteBatch.DrawString(spriteFont, "Press Esc to Exit", new Vector2(251, 420), Color.Black, 0, Vector2.Zero, .5f, SpriteEffects.None, 0);
+            spriteBatch.DrawString(spriteFont, "Press Esc to Exit", new Vector2(251, 420), Color.White, 0, Vector2.Zero, .5f, SpriteEffects.None, 0);
             spriteBatch.End();
             base.Draw(gameTime);
         }
