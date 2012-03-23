@@ -148,6 +148,7 @@ namespace Classic
 
         public void gameOver(bool success)
         {
+            totalScore += score;
             results = new Results(waveNumber, waves.Count, totalScore, maxScore, elapsedTime, success);
             complete = true;
         }
